@@ -1,24 +1,24 @@
 // import logo from './logo.svg';
 import './App.css';
+import Employee from './components/Employee.js';
 
 function App() {
+  console.log('we are going to show the list of the employee');
+  const ShowEmployees= true;
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Hello bro how are you!!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <p>
+      Hello, how are you!!
+    </p>
+    {ShowEmployees ?
+      <>
+        <Employee />
+        <Employee />
+        <Employee />   
+      </>
+      :<p>No, you can't see the Employee </p>
+    }
+  </div>
   );
 }
 
